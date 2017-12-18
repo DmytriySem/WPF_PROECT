@@ -20,9 +20,20 @@ namespace WPF_PROECT
     /// </summary>
     public partial class MainWindow : Window
     {
+        private TextBox txtBox = null;
+        /// <summary>
+        /// First comment   
+        /// </summary>
+        public void ShowHello()
+        {
+            txtBox = new TextBox() { Text = "HelloWorld" };
+            grid.Children.Add(txtBox);
+        }
         public MainWindow()
         {
             InitializeComponent();
+
+            ShowHello();
         }
     }
 }
